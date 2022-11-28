@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+
+int updatebit(int n,int pos,int i)
+{
+    int mask = ~(1<<pos);
+    n=n&mask;
+    return (n|(i<<pos));
+}
+
+int main()
+{
+    cout<<updatebit(5,1,1)<<endl;
+}
+
+
+output:
+
+7
